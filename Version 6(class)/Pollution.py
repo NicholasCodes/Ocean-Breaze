@@ -3,18 +3,17 @@ from tkinter import ttk
 import tkinter as tk
 from subprocess import call
 
-
-# a def for opening a subpage
-def open_new_page(page):
-    pollution.destroy()
-    call(["python", page])
-
-
 # class for subpage that is used to stop code from breaking
 class Subpage:
     def __init__(self, page):
         self.page = page
 
+        
+# a def for opening a subpage
+def open_new_page(page):
+    pollution.destroy()
+    call(["python", page])
+    
 
 # ------------------------------------------------- GUI CODE ---------------------------------------------------------
 pollution = tk.Tk()
