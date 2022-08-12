@@ -5,12 +5,6 @@ from subprocess import call
 import webbrowser
 
 
-# a def for opening a subpage
-def open_new_page(page):
-    charity.destroy()
-    call(["python", page])
-
-
 # class for subpage that is used to stop code from breaking
 class Subpage:
     def __init__(self, page):
@@ -21,7 +15,13 @@ class Subpage:
 def callback(url):
     webbrowser.open_new(url)
 
+    
+# a def for opening a subpage
+def open_new_page(page):
+    charity.destroy()
+    call(["python", page])
 
+    
 # ------------------------------------------------- GUI CODE ---------------------------------------------------------
 charity = tk.Tk()
 charity.title("Ocean Breaze")
