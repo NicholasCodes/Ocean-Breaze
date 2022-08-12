@@ -3,12 +3,6 @@ from subprocess import call
 import tkinter as tk
 
 
-# a def for opening a subpage
-def open_new_page(page):
-    ocean_breaze.destroy()
-    call(["python", page])
-
-
 # class for subpage that is used to stop code from breaking
 class Subpage:
     def __init__(self, page):
@@ -34,6 +28,12 @@ class Calculator:
         else:
             return False
 
+        
+# a def for opening a subpage
+def open_new_page(page):
+    ocean_breaze.destroy()
+    call(["python", page])
+    
 
 # Create a function to get entry names list
 def create_name_list():
