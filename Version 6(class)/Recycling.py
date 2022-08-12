@@ -5,6 +5,17 @@ from subprocess import call
 import webbrowser
 
 
+# class for subpage that is used to stop code from breaking
+class Subpage:
+    def __init__(self, page):
+        self.page = page
+
+
+# a callback function for the image button to open a url from a browsers
+def callback(url):
+    webbrowser.open_new(url)
+
+
 # creates a def for inputting subtexts with a adjustable row
 def set_subtext(text, row):
     texts = ttk.Label(body_frame, text=text, wraplength=594, font=("Arial", 16))
@@ -21,18 +32,6 @@ def set_heading_text(text, row):
 def open_new_page(page):
     recycling.destroy()
     call(["python", page])
-
-
-# class for subpage that is used to stop code from breaking
-class Subpage:
-    def __init__(self, page):
-        self.page = page
-
-
-# a callback function for the image button to open a url from a browsers
-def callback(url):
-    webbrowser.open_new(url)
-
 
 # ------------------------------------------------- GUI CODE ----------------------------------------------------------
 recycling = tk.Tk()
